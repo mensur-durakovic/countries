@@ -1,0 +1,64 @@
+.country-regions {
+	&-wrapper {
+		font-family: $font-family;
+		position: relative;
+		margin: $spacer--large 0;
+		@media (min-width: 768px) {
+			margin: 0;
+		}
+	}
+
+	&-picker {
+		height: 50px;
+		width: 200px;
+		border: 0;
+		box-sizing: border-box;
+		border-radius: $border-radius-card;
+		padding: $spacer--default;
+		font-family: $font-family;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: $font-size--secondary;
+
+		@include themed() {
+			color: t($text);
+			background: t($card-bg);
+			box-shadow: t($shadow);
+		}
+	}
+
+	&-options {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		position: absolute;
+		padding: $spacer--small 0;
+		border-radius: $border-radius-card;
+		bottom: (6 * -$spacer--largest) + (2 * -$spacer--small) - 3px; // 5 * options + 2 * ul padding top and bottom + 3px for borders
+		left: 0;
+		text-transform: capitalize;
+		font-size: $font-size--secondary;
+
+		@include themed() {
+			color: t($text);
+			background: t($card-bg);
+		}
+		&-active {
+			display: block;
+		}
+
+		&-inactive {
+			display: none;
+		}
+	}
+
+	&-option {
+		height: $spacer--largest;
+		padding: $spacer--small $spacer--default;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+}

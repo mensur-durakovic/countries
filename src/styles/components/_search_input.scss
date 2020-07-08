@@ -1,0 +1,31 @@
+.search-wrapper {
+	position: relative;
+
+	input {
+		height: 50px;
+		width: 300px;
+		padding: $spacer--extrasmall $spacer--extrasmall $spacer--extrasmall $spacer--default * 3;
+		box-sizing: border-box;
+		border: 0;
+		outline: none;
+		border-radius: $border-radius-card;
+		@include themed() {
+			color: t($text);
+			background: t($card-bg);
+			box-shadow: t($shadow);
+		}
+
+		&::placeholder {
+			@include themed() {
+				color: t($text);
+				font-family: $font-family;
+				font-size: $font-size--secondary;
+			}
+		}
+	}
+	svg {
+		position: absolute;
+		top: $spacer--default;
+		left: $spacer--default;
+	}
+}

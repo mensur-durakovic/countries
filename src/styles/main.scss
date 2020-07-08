@@ -1,0 +1,17 @@
+@import './base/fonts.scss';
+@import './base/settings';
+@import './base/color_themes';
+@import './base/base.scss';
+
+//components
+@import './components/header';
+@import './components/error_message';
+@import './components/spinner';
+@import './components/country_card';
+@import './components/search_input';
+@import './components/regions_dropdown';
+@import './components/filter_row';
+
+//pages
+@import './pages/home-page.scss';
+@import './pages/country-details-page.scss';

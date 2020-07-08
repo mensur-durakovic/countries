@@ -1,0 +1,27 @@
+.filter-row {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0 $spacer--largest;
+	margin: $spacer--large 0;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		align-items: center;
+		margin: $spacer--larger * 1.5 0;
+		padding: 0 $spacer--largest;
+	}
+
+	@media (min-width: 1025px) {
+		margin: $spacer--larger * 1.5 0;
+		padding: 0 $spacer--largest * 2;
+	}
+}
+
+.disable-text-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

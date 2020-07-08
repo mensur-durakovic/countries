@@ -1,0 +1,60 @@
+header {
+	height: $header-height;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: $spacer--default $spacer--largest;
+	font-weight: 800;
+	@media (min-width: 768px) {
+		padding: $spacer--default $spacer--largest * 2;
+	}
+
+	@include themed() {
+		color: t($text);
+		background: t($card-bg);
+		box-shadow: t($shadow);
+	}
+
+	h1 {
+		margin: 0;
+		font-size: $font-size--base;
+
+		@media (min-width: 768px) {
+			font-size: $font-size--extra-large;
+		}
+		@media (min-width: 1025px) {
+			font-size: $font-size--extra-large;
+		}
+	}
+
+	.theme-switcher {
+		outline: none;
+		border: 0;
+		padding: $spacer--small;
+		font-family: inherit;
+		font-weight: 600;
+		font-size: $font-size--secondary;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			font-size: $font-size--base;
+		}
+
+		@include themed() {
+			color: t($text);
+			background: t($card-bg);
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+
+		& > svg {
+			margin-right: $spacer--small;
+			font-size: $font-size--large;
+		}
+	}
+}
