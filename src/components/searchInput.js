@@ -24,6 +24,7 @@ function SearchInput() {
 	return (
 		<div className='search-wrapper'>
 			<input
+				aria-labelledby='search countries'
 				ref={searchInputRef}
 				id='searchCountry'
 				value={searchTerm}
