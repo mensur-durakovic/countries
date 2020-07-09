@@ -3,7 +3,6 @@ import DescriptionRow from '../components/descriptionRow';
 import Spinner from '../components/spinner';
 import * as actions from '../store/actions/index';
 import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -71,4 +70,4 @@ function CountryDetails(props) {
 	);
 }
 
-export default withRouter(CountryDetails);
+export default CountryDetails;

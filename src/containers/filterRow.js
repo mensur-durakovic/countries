@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import SearchInput from '../components/searchInput';
 import RegionDropdown from '../components/regionDropdown';
-import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../store/actions/index';
+import { useSelector, useDispatch } from 'react-redux';
 
-export default function FilterRow() {
+function FilterRow() {
 	const dispatch = useDispatch();
 	const region = useSelector(state => state.region);
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -27,3 +27,4 @@ export default function FilterRow() {
 		</div>
 	);
 }
+export default FilterRow;

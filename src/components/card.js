@@ -1,6 +1,6 @@
 import React from 'react';
-
-export default function Card(props) {
+import PropTypes from 'prop-types';
+function CountryCard(props) {
 	const { clickHandler } = props;
 	const { name, population, region, capital, flag } = props.country;
 	return (
@@ -24,3 +24,16 @@ export default function Card(props) {
 		</div>
 	);
 }
+
+CountryCard.propTypes = {
+	clickHandler: PropTypes.func.isRequired,
+	country: PropTypes.shape({
+		name: PropTypes.string.isRequired,
+		population: PropTypes.number.isRequired,
+		region: PropTypes.string.isRequired,
+		capital: PropTypes.string.isRequired,
+		flag: PropTypes.string.isRequired
+	})
+};
+
+export default CountryCard;

@@ -1,7 +1,6 @@
-import { put, call } from 'redux-saga/effects';
 import * as api from '../../api/api';
 import * as actions from '../actions/index';
-
+import { put, call } from 'redux-saga/effects';
 export function* fetchCountriesSaga(action) {
 	try {
 		yield put(actions.loadingCountries());

@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { REGIONS } from '../constants/regions';
 
-export default function RegionDropdown(props) {
+function RegionDropdown(props) {
 	const { region, regionChanged, dropdownOpen, dropdownToggleHandler } = props;
 
 	return (
@@ -26,3 +27,12 @@ export default function RegionDropdown(props) {
 		</div>
 	);
 }
+
+RegionDropdown.propTypes = {
+	region: PropTypes.string.isRequired,
+	regionChanged: PropTypes.func.isRequired,
+	dropdownOpen: PropTypes.bool,
+	dropdownToggleHandler: PropTypes.func.isRequired
+};
+
+export default RegionDropdown;

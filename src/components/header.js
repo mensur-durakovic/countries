@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
@@ -16,5 +17,11 @@ function Header(props) {
 		</header>
 	);
 }
+
+Header.propTypes = {
+	dark: PropTypes.bool,
+	changeTheme: PropTypes.func.isRequired,
+	history: PropTypes.object.isRequired
+};
 
 export default withRouter(Header);

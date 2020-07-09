@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import * as actions from '../store/actions/index';
 
-export default function SearchInput() {
+function SearchInput() {
 	const searchInputRef = useRef();
 	const dispatch = useDispatch();
 	const searchTerm = useSelector(state => state.searchTerm);
@@ -36,3 +36,4 @@ export default function SearchInput() {
 		</div>
 	);
 }
+export default SearchInput;

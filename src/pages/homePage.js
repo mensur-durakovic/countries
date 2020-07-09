@@ -6,7 +6,7 @@ import Message from '../components/errorMessage';
 import FilterRow from '../containers/filterRow';
 import * as actions from '../store/actions/index';
 
-export default function Home(props) {
+function Home(props) {
 	const dispatch = useDispatch();
 	const countries = useSelector(state => state.filteredCountries);
 	const errorFetchCountries = useSelector(state => state.errorFetchCountries);
@@ -39,3 +39,4 @@ export default function Home(props) {
 		</>
 	);
 }
+export default Home;
